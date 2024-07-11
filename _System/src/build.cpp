@@ -13,6 +13,5 @@ char Build::All()
 char Build::withoutPreprecess()
 {
     std::cout << "Build withoutPreprecess success" << std::endl;
-
     return 0x01;
 }
