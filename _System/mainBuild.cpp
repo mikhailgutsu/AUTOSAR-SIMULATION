@@ -1,96 +1,93 @@
-#include <iostream>
 #include "src/build.cpp"
-
-using namespace std;
 
 extern char BuildChoise(char tmp)
 {
-    cout << "build choise" << endl;
+    std::cout << "build choise" << std::endl;
 
     Build b1;
 
     switch(tmp)
     {
         case 0x01:
-            cout << "0x01" << endl;
+            std::cout << "0x01" << std::endl;
 
             b1.All();
                 // To be continue..
             break;
         case 0x02:
-            cout << "0x02" << endl;
+            std::cout << "0x02" << std::endl;
 
             b1.withoutPreprecess();
                 // To be continue..
             break;
         case 0x03:
-            cout << "0x03" << endl;
+            std::cout << "0x03" << std::endl;
 
             b1.Preprocess();
                 // To be continue..
             break;
         case 0x04:
-            cout << "0x04" << endl;
+            std::cout << "0x04" << std::endl;
 
             b1.preprocessWithoutCusReprog();
                 // To be continue..
             break;
         case 0x05:
-            cout << "0x05" << endl;
+            std::cout << "0x05" << std::endl;
 
             b1.Compile();
                 // To be continue..
             break;
         case 0x06:
-            cout << "0x06" << endl;
+            std::cout << "0x06" << std::endl;
 
             b1.compileLink();
                 // To be continue..
             break;
         case 0x07:
-            cout << "0x07" << endl;
+            std::cout << "0x07" << std::endl;
 
             b1.reportGenerator();
                 // To be continue..
             break;
         case 0x08:
-            cout << "0x08" << endl;
+            std::cout << "0x08" << std::endl;
 
             b1.RUNIN_GUI_Fast();
                  // To be continue..
             break;
         case 0x09:
-            cout << "0x09" << endl;
+            std::cout << "0x09" << std::endl;
 
             b1.RUNIN_GUI_Slow();
                  // To be continue..
             break;
         case 0x0A:
-            cout << "0x0A" << endl;
+            std::cout << "0x0A" << std::endl;
 
             b1.Tessy();
                 // To be continue..
             break;
         case 0x0B:
-            cout << "0x0B" << endl;
+            std::cout << "0x0B" << std::endl;
 
             b1.PCLINT();
                 // To be continue..
             break;
         case 0x0C:
-            cout << "0x0C" << endl;
+            std::cout << "0x0C" << std::endl;
 
             b1.PCLINT_ALL();
                 // To be continue..
             break;
         case 0x0D:
-            cout << "0x0D" << endl;
+            std::cout << "0x0D" << std::endl;
 
             b1.tresosCnf();
                 // To be continue..
             break;
         default:
-            cout << "default" << endl;
+            std::cout << "default" << std::endl;
     }
 
     return 0x01;
