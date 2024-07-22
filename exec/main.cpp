@@ -3,15 +3,105 @@
 
 #include "logger/incl/logger.h"
 #include "startMenu/src/menu.cpp"
+#include "startMenu/src/checker.cpp"
 #include "../_System/mainBuild.cpp"
 
 using namespace std;
 
-void setCursorPosition(int x, int y) {
-    HANDLE hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
-    
-    COORD position = { static_cast<SHORT>(x), static_cast<SHORT>(y) };
-    SetConsoleCursorPosition(hConsole, position);
+int c_flag = 1, c_temp = 1;
+
+int mainFuncion(int temp_flag)
+{
+    int temp_c = 1;
+    startMenu1();
+
+    while(true)
+        {
+            if (checkerBUTTON_UP())
+            {
+                switch (temp_c)
+                {
+                case 1:
+                    temp_c = 4;
+                    startMenu4();
+                        Sleep(100);
+                    break;
+                case 2:
+                    temp_c = 1;
+                    startMenu1();
+                        Sleep(100);
+                    break;
+                case 3:
+                    temp_c = 2;
+                    startMenu2();
+                        Sleep(100);
+                    break;
+                case 4:
+                    temp_c = 3;
+                    startMenu3();
+                        Sleep(100);
+                    break;
+                }
+            }
+            else if (checkerBUTTON_DOWN())
+            {
+                switch (temp_c)
+                {
+                case 1:
+                    temp_c = 2;
+                    startMenu2();
+                        Sleep(100);
+                    break;
+                case 2:
+                    temp_c = 3;
+                    startMenu3();
+                        Sleep(100);
+                    break;
+                case 3:
+                    temp_c = 4;
+                    startMenu4();
+                        Sleep(100);
+                    break;
+                case 4:
+                    temp_c = 1;
+                    startMenu1();
+                        Sleep(100);
+                    break;
+                }
+            }
+            else if (checkerBUTTON_ENTER())
+            {
+                switch (temp_c)
+                {
+                case 1:
+                    temp_flag = 1;
+                        return temp_flag;
+                    break;
+                case 2:
+                    temp_flag = 2;
+                        return temp_flag;
+                    break;
+                case 3:
+                    temp_flag = 3;
+                        return temp_flag;
+                    break;
+                case 4:
+                    temp_flag = 4;
+                        return temp_flag;
+                    break;
+                }
+            }
+        }
+
+    return 0;
+}
+
+int buildGUI()
+{
+    int c_temp = 1;
+    BuildMenu1();
+
+    return 0;
 }
 
 int main()
@@ -28,72 +118,26 @@ int main()
 
     // Log messages
     //logger.log("This is a log message.");
-    char c_temp = 1;
-    startMenu1();
-
     while(true)
     {
-            //<-------------------------------------------------------  UP_BUTTON trigger
-            if ((GetAsyncKeyState(VK_UP) & 0x8000) && (c_temp == 1)) 
-            {
-                c_temp = 4;
-                startMenu4();
+        mainFuncion(c_flag);
+        switch(c_flag)
+        {
+            case 1:
+                    buildGUI();
+                break;
 
-                Sleep(200);
-            }
-            if ((GetAsyncKeyState(VK_UP) & 0x8000) && (c_temp == 4)) 
-            {
-                c_temp = 3;
-                startMenu3();
+            case 2:
+                break;
 
-                Sleep(200);
-            }
-            if ((GetAsyncKeyState(VK_UP) & 0x8000) && (c_temp == 3)) 
-            {
-                c_temp = 2;
-                startMenu2();
+            case 3:
+                break;
 
-                Sleep(200);
-            }
-            if ((GetAsyncKeyState(VK_UP) & 0x8000) && (c_temp == 2)) 
-            {
-                c_temp = 1;
-                startMenu1();
+            case 4:
+                break;
 
-                Sleep(200);
-            }
-
-            //<-------------------------------------------------------  DOWN_BUTTON trigger
-            if ((GetAsyncKeyState(VK_DOWN) & 0x8000) && (c_temp == 1)) 
-            {
-                c_temp = 2;
-                startMenu2();
-
-                Sleep(200);
-            }
-            if ((GetAsyncKeyState(VK_DOWN) & 0x8000) && (c_temp == 2)) 
-            {
-                c_temp = 3;
-                startMenu3();
-
-                Sleep(200);
-            }
-            if ((GetAsyncKeyState(VK_DOWN) & 0x8000) && (c_temp == 3)) 
-            {
-                c_temp = 4;
-                startMenu4();
-
-                Sleep(200);
-            }
-            if ((GetAsyncKeyState(VK_DOWN) & 0x8000) && (c_temp == 4)) 
-            {
-                c_temp = 1;
-                startMenu1();
-
-                Sleep(200);
-            }
+        }
     }
-    
     //logger.log("Another log message.");
 
     return 0;

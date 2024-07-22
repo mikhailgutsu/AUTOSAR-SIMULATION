@@ -1,5 +1,6 @@
 #include <iostream>
 #include "../incl/build.h"
+#include <windows.h>
 
 Build::Build(){}
 Build::~Build(){}
