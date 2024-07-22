@@ -1,4 +1,5 @@
 #include <iostream>
+#include <windows.h>
 #include "logger/incl/logger.h"
 #include "startMenu/src/menu.cpp"
 #include "../_System/mainBuild.cpp"
@@ -24,8 +25,12 @@ int main()
 
         //startMenu();
 
-            BuildChoise(0x01);
-            BuildChoise(0x02);
+        for (char c_tmp = 0x01 ; c_tmp <= 0x0D ; c_tmp++ )
+        {
+            BuildChoise(c_tmp);
+            logger.log("Build status - success");
+            Sleep(100);
+        }
 
     logger.log("Another log message.");
 
