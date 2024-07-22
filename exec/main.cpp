@@ -1,5 +1,6 @@
 #include <iostream>
 #include "logger/incl/logger.h"
+#include "startMenu/src/menu.cpp"
 #include "../_System/mainBuild.cpp"
 
 using namespace std;
@@ -19,8 +20,12 @@ int main()
     // Log messages
     logger.log("This is a log message.");
 
-    BuildChoise(0x01);
-    BuildChoise(0x02);
+    char tmp;
+
+        //startMenu();
+
+            BuildChoise(0x01);
+            BuildChoise(0x02);
 
     logger.log("Another log message.");
 
