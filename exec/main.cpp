@@ -1,10 +1,18 @@
 #include <iostream>
 #include <windows.h>
+
 #include "logger/incl/logger.h"
 #include "startMenu/src/menu.cpp"
 #include "../_System/mainBuild.cpp"
 
 using namespace std;
+
+void setCursorPosition(int x, int y) {
+    HANDLE hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
+    
+    COORD position = { static_cast<SHORT>(x), static_cast<SHORT>(y) };
+    SetConsoleCursorPosition(hConsole, position);
+}
 
 int main()
 {
@@ -20,19 +28,72 @@ int main()
 
     // Log messages
     //logger.log("This is a log message.");
+    char c_temp = 1;
+    startMenu1();
 
-    char tmp;
+    while(true)
+    {
+            //<-------------------------------------------------------  UP_BUTTON trigger
+            if ((GetAsyncKeyState(VK_UP) & 0x8000) && (c_temp == 1)) 
+            {
+                c_temp = 4;
+                startMenu4();
 
-        //startMenu();
+                Sleep(200);
+            }
+            if ((GetAsyncKeyState(VK_UP) & 0x8000) && (c_temp == 4)) 
+            {
+                c_temp = 3;
+                startMenu3();
 
-        for (char c_tmp = 0x01 ; c_tmp <= 0x0D ; c_tmp++ )
-        {
-            system("cls");
-            BuildChoise(c_tmp);
-            //logger.log("Build status - success");
-            Sleep(1000);
-        }
+                Sleep(200);
+            }
+            if ((GetAsyncKeyState(VK_UP) & 0x8000) && (c_temp == 3)) 
+            {
+                c_temp = 2;
+                startMenu2();
 
+                Sleep(200);
+            }
+            if ((GetAsyncKeyState(VK_UP) & 0x8000) && (c_temp == 2)) 
+            {
+                c_temp = 1;
+                startMenu1();
+
+                Sleep(200);
+            }
+
+            //<-------------------------------------------------------  DOWN_BUTTON trigger
+            if ((GetAsyncKeyState(VK_DOWN) & 0x8000) && (c_temp == 1)) 
+            {
+                c_temp = 2;
+                startMenu2();
+
+                Sleep(200);
+            }
+            if ((GetAsyncKeyState(VK_DOWN) & 0x8000) && (c_temp == 2)) 
+            {
+                c_temp = 3;
+                startMenu3();
+
+                Sleep(200);
+            }
+            if ((GetAsyncKeyState(VK_DOWN) & 0x8000) && (c_temp == 3)) 
+            {
+                c_temp = 4;
+                startMenu4();
+
+                Sleep(200);
+            }
+            if ((GetAsyncKeyState(VK_DOWN) & 0x8000) && (c_temp == 4)) 
+            {
+                c_temp = 1;
+                startMenu1();
+
+                Sleep(200);
+            }
+    }
+    
     //logger.log("Another log message.");
 
     return 0;
