@@ -43,7 +43,7 @@ int mainFuncion(int temp_flag)
                     break;
                 }
             }
-            else if (checkerBUTTON_DOWN())
+            if (checkerBUTTON_DOWN())
             {
                 switch (temp_c)
                 {
@@ -69,7 +69,7 @@ int mainFuncion(int temp_flag)
                     break;
                 }
             }
-            else if (checkerBUTTON_ENTER())
+            if (checkerBUTTON_ENTER())
             {
                 switch (temp_c)
                 {
@@ -100,6 +100,26 @@ int buildGUI()
 {
     int c_temp = 1;
     BuildMenu1();
+
+    while(true)
+    {
+        system("cls");
+        if (checkerBUTTON_UP())
+        {
+            system("cls");
+            cout << "UP" << endl;
+        }
+        if (checkerBUTTON_DOWN())
+        {
+            system("cls");
+            cout << "DOWN" << endl;
+        }
+        if (checkerBUTTON_ENTER())
+        {
+            system("cls");
+            cout << "ENTER" << endl;
+        }
+    }
 
     return 0;
 }
