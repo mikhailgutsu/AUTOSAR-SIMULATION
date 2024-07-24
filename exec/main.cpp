@@ -318,7 +318,6 @@ int main()
                     }
             break;
             case 2:
-
                 terminal();
 
                 break;
