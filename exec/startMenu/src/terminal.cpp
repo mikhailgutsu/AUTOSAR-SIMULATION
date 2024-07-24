@@ -25,9 +25,7 @@ void terminalLoading()
 
 void terminalWelcome()
 {
-    terminalLoading();
-
-    std::cout << "Terminal v1.0 [AUTOSAR-SIMULATION]" << std::endl;
+    std::cout << std::endl << "Terminal v1.0 [AUTOSAR-SIMULATION]" << std::endl;
     std::cout << "(c) https://github.com/mikhailgutsu/AUTOSAR-SIMULATION/" << std::endl;
 
     std::cout << "&projectPATH:\\Admin >> ";
@@ -48,8 +46,8 @@ void terminalHelp()
 
 int terminal()
 {
-    system("cls");
-    
+    terminalLoading();
+
     std::pmr::string commandINPUT;
     int commandINPUT_ID = 0;
 
@@ -70,8 +68,9 @@ int terminal()
         switch(commandINPUT_ID)
         {
             case 0:
-                    system("cls");
-                    std::cout << commandINPUT << " - Isn't internal/external command. Please use '/help' for information." << std::endl;
+                    std::cout << std::endl << commandINPUT << " - Isn't internal/external command. Please use '/help' for information." << std::endl << std::endl;
+
+                    system("pause");
                 break;
             case 1:
                     terminalHelp();
@@ -86,6 +85,7 @@ int terminal()
             case 9:
                 break;
         }
+        commandINPUT_ID = 0;
     }
 
     return 0;
