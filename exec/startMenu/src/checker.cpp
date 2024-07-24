@@ -30,3 +30,13 @@ char checkerBUTTON_ENTER()
             
     return 0x00;
 }
+
+char checkerBUTTON_ESCAPE()
+{
+    if (GetAsyncKeyState(VK_ESCAPE) & 0x8000)
+            {
+                return 0x01;
+            }
+            
+    return 0x00;
+}

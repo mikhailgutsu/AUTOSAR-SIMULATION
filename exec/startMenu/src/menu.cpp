@@ -6,7 +6,7 @@ void startMenu1()
 
     std::cout << " --------------------------------------------------- " << std::endl;
     std::cout << " | > 1.   Build Option                             | " << std::endl;
-    std::cout << " |   2.                                            | " << std::endl;
+    std::cout << " |   2.   Terminal                                 | " << std::endl;
     std::cout << " |   3.                                            | " << std::endl;
     std::cout << " |   4.                                            | " << std::endl;
     std::cout << " --------------------------------------------------- " << std::endl;
@@ -18,7 +18,7 @@ void startMenu2()
 
     std::cout << " --------------------------------------------------- " << std::endl;
     std::cout << " |   1.   Build Option                             | " << std::endl;
-    std::cout << " | > 2.                                            | " << std::endl;
+    std::cout << " | > 2.   Terminal                                 | " << std::endl;
     std::cout << " |   3.                                            | " << std::endl;
     std::cout << " |   4.                                            | " << std::endl;
     std::cout << " --------------------------------------------------- " << std::endl;
@@ -30,7 +30,7 @@ void startMenu3()
 
     std::cout << " --------------------------------------------------- " << std::endl;
     std::cout << " |   1.   Build Option                             | " << std::endl;
-    std::cout << " |   2.                                            | " << std::endl;
+    std::cout << " |   2.   Terminal                                 | " << std::endl;
     std::cout << " | > 3.                                            | " << std::endl;
     std::cout << " |   4.                                            | " << std::endl;
     std::cout << " --------------------------------------------------- " << std::endl;
@@ -42,7 +42,7 @@ void startMenu4()
 
     std::cout << " --------------------------------------------------- " << std::endl;
     std::cout << " |   1.   Build Option                             | " << std::endl;
-    std::cout << " |   2.                                            | " << std::endl;
+    std::cout << " |   2.   Terminal                                 | " << std::endl;
     std::cout << " |   3.                                            | " << std::endl;
     std::cout << " | > 4.                                            | " << std::endl;
     std::cout << " --------------------------------------------------- " << std::endl;

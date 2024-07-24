@@ -328,7 +328,7 @@ int main()
             case 1:
                     buildGUI(c_flag);
                 break;
-
+                    
             case 2:
                 break;
 
