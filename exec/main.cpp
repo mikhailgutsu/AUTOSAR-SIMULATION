@@ -8,8 +8,6 @@
 
 using namespace std;
 
-int c_flag = 1, c_temp = 1;
-
 int mainFuncion()
 {
     int temp_c = 1;
@@ -73,7 +71,6 @@ int mainFuncion()
 int buildGUI()
 {
     int c_temp = 1;
-    BuildMenu1();
 
     while(true)
     {
@@ -249,7 +246,123 @@ int main()
                 system("cls");
                 cout << "1 - was returned" << endl;
                 Sleep(1000);
+                    
+                    BuildMenu1();
+                    switch(buildGUI())
+                    {
+                        case 1:
+                            system("cls");
+                            cout << "1 - was returned" << endl;
+                            Sleep(1000);
 
+                            return 0;
+                        break;
+                        case 2:
+                            system("cls");
+                            cout << "2 - was returned" << endl;
+                            Sleep(1000);
+
+                            return 0;
+                        break;
+                        case 3:
+                            system("cls");
+                            cout << "3 - was returned" << endl;
+                            Sleep(1000);
+
+                            return 0;
+                        break;
+                        case 4:
+                            system("cls");
+                            cout << "4 - was returned" << endl;
+                            Sleep(1000);
+
+                            return 0;
+                        break;
+                        case 5:
+                            system("cls");
+                            cout << "5 - was returned" << endl;
+                            Sleep(1000);
+
+                            return 0;
+                        break;
+                        case 6:
+                            system("cls");
+                            cout << "6 - was returned" << endl;
+                            Sleep(1000);
+
+                            return 0;
+                        break;
+                        case 7:
+                            system("cls");
+                            cout << "7 - was returned" << endl;
+                            Sleep(1000);
+
+                            return 0;
+                        break;
+                        case 8:
+                            system("cls");
+                            cout << "8 - was returned" << endl;
+                            Sleep(1000);
+
+                            return 0;
+                        break;
+                        case 9:
+                            system("cls");
+                            cout << "9 - was returned" << endl;
+                            Sleep(1000);
+
+                            return 0;
+                        break;
+                        case 10:
+                            system("cls");
+                            cout << "10 - was returned" << endl;
+                            Sleep(1000);
+
+                            return 0;
+                        break;
+                        case 11:
+                            system("cls");
+                            cout << "11 - was returned" << endl;
+                            Sleep(1000);
+
+                            return 0;
+                        break;
+                        case 12:
+                            system("cls");
+                            cout << "12 - was returned" << endl;
+                            Sleep(1000);
+
+                            return 0;
+                        break;
+                        case 13:
+                            system("cls");
+                            cout << "13 - was returned" << endl;
+                            Sleep(1000);
+
+                            return 0;
+                        break;
+                        case 14:
+                            system("cls");
+                            cout << "14 - was returned" << endl;
+                            Sleep(1000);
+
+                            return 0;
+                        break;
+                        case 15:
+                            system("cls");
+                            cout << "15 - was returned" << endl;
+                            Sleep(1000);
+
+                            return 0;
+                        break;
+                        case 0:
+                            system("cls");
+                            cout << "0 - was returned" << endl;
+                            Sleep(1000);
+
+                            return 0;
+                        break;
+                    }
                 return 0;
             break;
             case 2:
