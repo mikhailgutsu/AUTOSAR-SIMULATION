@@ -17,7 +17,7 @@ int mainFuncion(int temp_flag)
 
     while(true)
         {
-            if (checkerBUTTON_UP())
+            if (checkerBUTTON_UP() == 0x01)
             {
                 switch (temp_c)
                 {
@@ -40,7 +40,7 @@ int mainFuncion(int temp_flag)
                 }
                 Sleep(100);
             }
-            if (checkerBUTTON_DOWN())
+            if (checkerBUTTON_DOWN() == 0x01)
             {
                 switch (temp_c)
                 {
@@ -63,7 +63,7 @@ int mainFuncion(int temp_flag)
                 }
                 Sleep(100);
             }
-            if (checkerBUTTON_ENTER())
+            if (checkerBUTTON_ENTER() == 0x01)
             {
                 switch (temp_c)
                 {
@@ -87,8 +87,6 @@ int mainFuncion(int temp_flag)
                 Sleep(100);
             }
         }
-
-    return 0;
 }
 
 int buildGUI(int temp_flag)
@@ -98,7 +96,7 @@ int buildGUI(int temp_flag)
 
     while(true)
     {
-        if (checkerBUTTON_UP())
+        if (checkerBUTTON_UP() == 0x01)
         {
             switch (c_temp)
                 {
@@ -165,7 +163,7 @@ int buildGUI(int temp_flag)
                 }
                 Sleep(100);
         }
-        if (checkerBUTTON_DOWN())
+        if (checkerBUTTON_DOWN() == 0x01)
         {
             switch (c_temp)
                 {
@@ -232,7 +230,7 @@ int buildGUI(int temp_flag)
                 }
                 Sleep(100);
         }
-        if (checkerBUTTON_ENTER())
+        if (checkerBUTTON_ENTER() == 0x01)
         {
             switch (c_temp)
                 {
@@ -298,7 +296,12 @@ int buildGUI(int temp_flag)
                     break;
                 }
                 Sleep(100);
-            
+            if (checkerBUTTON_ESCAPE())
+            {
+                Sleep(1000);
+                temp_flag = 0;
+                return temp_flag;
+            }
             return temp_flag;
         }
     }
@@ -327,6 +330,17 @@ int main()
         {
             case 1:
                     buildGUI(c_flag);
+                    if ((buildGUI(c_flag) >= 1) && (buildGUI(c_flag) <= 14))
+                    {
+                        system("cls");
+                        cout << "Welcome";
+                        Sleep(2000);
+                        return 0;
+                    }
+                    else if ((buildGUI(c_flag) == 0) || (buildGUI(c_flag) == 15))
+                    {
+
+                    }
                 break;
                     
             case 2:
@@ -337,7 +351,6 @@ int main()
 
             case 4:
                 break;
-
         }
     }
     //logger.log("Another log message.");
