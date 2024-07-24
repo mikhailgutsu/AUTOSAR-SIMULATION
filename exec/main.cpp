@@ -10,10 +10,9 @@ using namespace std;
 
 int c_flag = 1, c_temp = 1;
 
-int mainFuncion(int temp_flag)
+int mainFuncion()
 {
     int temp_c = 1;
-    startMenu1();
 
     while(true)
         {
@@ -65,31 +64,13 @@ int mainFuncion(int temp_flag)
             }
             if (checkerBUTTON_ENTER() == 0x01)
             {
-                switch (temp_c)
-                {
-                case 1:
-                    temp_flag = 1;
-                        return temp_flag;
-                    break;
-                case 2:
-                    temp_flag = 2;
-                        return temp_flag;
-                    break;
-                case 3:
-                    temp_flag = 3;
-                        return temp_flag;
-                    break;
-                case 4:
-                    temp_flag = 4;
-                        return temp_flag;
-                    break;
-                }
+                return temp_c;
                 Sleep(100);
             }
         }
 }
 
-int buildGUI(int temp_flag)
+int buildGUI()
 {
     int c_temp = 1;
     BuildMenu1();
@@ -232,77 +213,13 @@ int buildGUI(int temp_flag)
         }
         if (checkerBUTTON_ENTER() == 0x01)
         {
-            switch (c_temp)
-                {
-                case 1:
-                        temp_flag = 1;
-                        return temp_flag;
-                    break;
-                case 2:
-                        temp_flag = 2;
-                        return temp_flag;
-                    break;
-                case 3:
-                        temp_flag = 3;
-                        return temp_flag;
-                    break;
-                case 4:
-                        temp_flag = 4;
-                        return temp_flag;
-                    break;
-                case 5:
-                        temp_flag = 5;
-                        return temp_flag;
-                    break;
-                case 6:
-                        temp_flag = 6;
-                        return temp_flag;
-                    break;
-                case 7:
-                        temp_flag = 7;
-                        return temp_flag;
-                    break;
-                case 8:
-                        temp_flag = 8;
-                        return temp_flag;
-                    break;
-                case 9:
-                        temp_flag = 9;
-                        return temp_flag;
-                    break;
-                case 10:
-                        temp_flag = 10;
-                        return temp_flag;
-                    break;
-                case 11:
-                        temp_flag = 11;
-                        return temp_flag;
-                    break;
-                case 12:
-                        temp_flag = 12;
-                        return temp_flag;
-                    break;
-                case 13:
-                        temp_flag = 13;
-                        return temp_flag;
-                    break;
-                case 14:
-                        temp_flag = 14;
-                        return temp_flag;
-                    break;
-                case 15:
-                        temp_flag = 15;
-                        return temp_flag;
-                    break;
-                }
-                Sleep(100);
-            if (checkerBUTTON_ESCAPE())
-            {
-                Sleep(1000);
-                temp_flag = 0;
-                return temp_flag;
-            }
-            return temp_flag;
+            return c_temp;
+            Sleep(100);
+        }
+        if (checkerBUTTON_ESCAPE())
+        {
+            c_temp = 0;
+            return c_temp;
         }
     }
 
@@ -325,33 +242,41 @@ int main()
     //logger.log("This is a log message.");
     while(true)
     {
-        mainFuncion(c_flag);
-        switch(c_flag)
+        startMenu1();
+        switch(mainFuncion())
         {
             case 1:
-                    buildGUI(c_flag);
-                    if ((buildGUI(c_flag) >= 1) && (buildGUI(c_flag) <= 14))
-                    {
-                        system("cls");
-                        cout << "Welcome";
-                        Sleep(2000);
-                        return 0;
-                    }
-                    else if ((buildGUI(c_flag) == 0) || (buildGUI(c_flag) == 15))
-                    {
+                system("cls");
+                cout << "1 - was returned" << endl;
+                Sleep(1000);
 
-                    }
-                break;
-                    
+                return 0;
+            break;
             case 2:
-                break;
+                system("cls");
+                cout << "2 - was returned" << endl;
+                Sleep(1000);
 
+                return 0;
+            break;
             case 3:
-                break;
+                system("cls");
+                cout << "3 - was returned" << endl;
+                Sleep(1000);
 
+                return 0;
+            break;
             case 4:
-                break;
+                system("cls");
+                cout << "4 - was returned" << endl;
+                Sleep(1000);
+
+                return 0;
+            break;
+
         }
+
+        
     }
     //logger.log("Another log message.");
 
