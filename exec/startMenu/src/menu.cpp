@@ -1,5 +1,23 @@
 #include "../incl/menu.h"
 
+void startMenuAnimated()
+{
+    system("cls");
+
+    Sleep(100);
+    std::cout << " --------------------------------------------------- " << std::endl;
+    Sleep(100);
+    std::cout << " | > 1.   Build Option                             | " << std::endl;
+    Sleep(100);
+    std::cout << " |   2.   Terminal                                 | " << std::endl;
+    Sleep(100);
+    std::cout << " |   3.                                            | " << std::endl;
+    Sleep(100);
+    std::cout << " |   4.                                            | " << std::endl;
+    Sleep(100);
+    std::cout << " --------------------------------------------------- " << std::endl;
+}
+
 void startMenu1()
 {
     system("cls");
@@ -46,6 +64,49 @@ void startMenu4()
     std::cout << " |   3.                                            | " << std::endl;
     std::cout << " | > 4.                                            | " << std::endl;
     std::cout << " --------------------------------------------------- " << std::endl;
+}
+
+void BuildMenuAnimated()
+{
+    system("cls");
+
+    Sleep(100);
+    std::cout << " --------------------------------------------------- " << std::endl;
+    Sleep(100);
+    std::cout << " | > 1.   All                                      | " << std::endl;
+    Sleep(100);
+    std::cout << " |   2.   Without_Preprecess                       | " << std::endl;
+    Sleep(100);
+    std::cout << " |   3.   Preprocess                               | " << std::endl;
+    Sleep(100);
+    std::cout << " |   4.   Preprocess_Without_Cus_Reprog            | " << std::endl;
+    Sleep(100);
+    std::cout << " |   5.   Build Option                             | " << std::endl;
+    Sleep(100);
+    std::cout << " |   6.   Compile                                  | " << std::endl;
+    Sleep(100);
+    std::cout << " |   7.   Compile_Link                             | " << std::endl;
+    Sleep(100);
+    std::cout << " |   8.   Report Generator                         | " << std::endl;
+    Sleep(100);
+    std::cout << " |   9.   Build Option                             | " << std::endl;
+    Sleep(100);
+    std::cout << " |   10.  RUNIN_GUI_Fast                           | " << std::endl;
+    Sleep(100);
+    std::cout << " |   11.  RUNIN_GUI_Slow                           | " << std::endl;
+    Sleep(100);
+    std::cout << " |   12.  Tessy                                    | " << std::endl;
+    Sleep(100);
+    std::cout << " |   13.  PCLINT_ALL                               | " << std::endl;
+    Sleep(100);
+    std::cout << " |   14.  Tresos_Cnf                               | " << std::endl;
+    Sleep(100);
+    std::cout << " |                                                 | " << std::endl;
+    Sleep(100);
+    std::cout << " |   15.  Back                                     | " << std::endl;
+    Sleep(100);
+    std::cout << " --------------------------------------------------- " << std::endl;
+    Sleep(100);
 }
 
 void BuildMenu1()
