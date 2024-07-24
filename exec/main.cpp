@@ -311,49 +311,33 @@ int buildGUI(int temp_flag)
 
 int main()
 {
-    // Specify the full path to your log file
-    //string logFilePath = "AUTOSAR-SIMULATION/FS_AUTOSAR_V1/build/log/logfile.txt";
 
-    // Ensure directory for log file exists
-    //string directory = logFilePath.substr(0, logFilePath.find_last_of('/'));
-    //system(("mkdir -p " + directory).c_str());
-
-    // Initialize logger
-    //Logger logger(logFilePath);
-
-    // Log messages
-    //logger.log("This is a log message.");
     while(true)
     {
-        mainFuncion(c_flag);
-        switch(c_flag)
+        system("cls");
+        cout << c_flag << endl;
+        if (checkerBUTTON_ESCAPE())
         {
-            case 1:
-                    buildGUI(c_flag);
-                    if ((buildGUI(c_flag) >= 1) && (buildGUI(c_flag) <= 14))
-                    {
-                        system("cls");
-                        cout << "Welcome";
-                        Sleep(2000);
-                        return 0;
-                    }
-                    else if ((buildGUI(c_flag) == 0) || (buildGUI(c_flag) == 15))
-                    {
-
-                    }
-                break;
-                    
-            case 2:
-                break;
-
-            case 3:
-                break;
-
-            case 4:
-                break;
+            c_flag = 0;
+                    Sleep(100);
+        }
+        if (checkerBUTTON_UP())
+        {
+            c_flag--;
+                    Sleep(100);
+        }
+        if (checkerBUTTON_DOWN())
+        {
+            c_flag++;
+                    Sleep(100);
+        }
+        if (checkerBUTTON_ENTER())
+        {
+            c_flag = 10;
+                    Sleep(100);
         }
     }
-    //logger.log("Another log message.");
+        
 
     return 0;
 }
