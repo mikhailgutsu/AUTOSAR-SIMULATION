@@ -1,11 +1,13 @@
 #ifndef MENU_H
 #define MENU_H
 
+void startMenuAnimated();
 void startMenu1();
 void startMenu2();
 void startMenu3();
 void startMenu4();
 
+void BuildMenuAnimated();
 void BuildMenu1();
 void BuildMenu2();
 void BuildMenu3();
