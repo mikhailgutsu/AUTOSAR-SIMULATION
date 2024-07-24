@@ -4,6 +4,7 @@
 #include "logger/incl/logger.h"
 #include "startMenu/src/menu.cpp"
 #include "startMenu/src/checker.cpp"
+#include "startMenu/src/terminal.cpp"
 #include "../_System/mainBuild.cpp"
 
 using namespace std;
@@ -317,6 +318,10 @@ int main()
                     }
             break;
             case 2:
+
+                terminal();
+
+                break;
             case 3:
             case 4:
             break;
