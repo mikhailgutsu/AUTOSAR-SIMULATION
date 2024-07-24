@@ -319,7 +319,7 @@ int main()
             break;
             case 2:
 
-                //terminal
+                terminal();
 
                 break;
             case 3:
