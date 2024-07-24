@@ -285,12 +285,14 @@ int main()
     //logger.log("This is a log message.");
     while(true)
     {
-        startMenu1();
+        startMenuAnimated();
         switch(mainFuncion())
         {
             case 1:
                 system("cls");
-                    BuildMenu1();
+                Sleep(300);
+
+                    BuildMenuAnimated();
                     switch(buildGUI())
                     {
                         case 1:
