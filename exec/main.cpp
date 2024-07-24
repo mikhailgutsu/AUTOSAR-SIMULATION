@@ -309,23 +309,18 @@ int main()
                         case 12:
                         case 13:
                         case 14:
+                            return 0;
+                            break;
                         case 15:
                         case 0:
-
-                            return 0;
-                        break;
+                            break;
                     }
             break;
             case 2:
             case 3:
             case 4:
-
-                return 0;
             break;
-
         }
-
-        
     }
     //logger.log("Another log message.");
 
