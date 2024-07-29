@@ -93,7 +93,7 @@ int terminal()
                     terminalHelp();
                 break;
             case 2:
-
+                status = FALSE;
                 break;
             case 3:
 
