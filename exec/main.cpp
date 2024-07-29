@@ -2,6 +2,7 @@
 #include <windows.h>
 
 #include "logger/incl/f_logger.h"
+#include "logger/incl/logger.h"
 #include "startMenu/src/menu.cpp"
 #include "startMenu/src/checker.cpp"
 #include "startMenu/src/terminal.cpp"
