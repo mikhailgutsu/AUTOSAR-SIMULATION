@@ -15,7 +15,7 @@ F_Logger::~F_Logger() {
     }
 }
 
-void F_Logger::log(const std::string& message) {
+void F_Logger::f_log(const std::string& message) {
     if (logfile.is_open()) {
         std::time_t now = std::time(nullptr);
         logfile << std::ctime(&now) << ": " << message << std::endl;

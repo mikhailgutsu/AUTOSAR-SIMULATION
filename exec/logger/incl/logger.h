@@ -1,15 +1,15 @@
 #ifndef LOGGER_H
 #define LOGGER_H
 
-#include <fstream>
 #include <string>
+#include <windows.h>
+
+void SetColor(int color);
 
 class Logger {
 private:
 
 public:
-    Logger();
-    ~Logger();
     void log(const std::string& message);
 };
 

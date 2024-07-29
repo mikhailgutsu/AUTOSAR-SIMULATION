@@ -2,17 +2,12 @@
 #include <iostream>
 #include <ctime>
 
-Logger::Logger() 
-{
-
-}
-
-
-Logger::~Logger() 
-{
+void SetColor(int color) {
+    HANDLE hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
+    SetConsoleTextAttribute(hConsole, color);
 }
 
 void Logger::log(const std::string& message) {
         std::time_t now = std::time(nullptr);
-        std::cout << std::ctime(&now) << ": " << message << std::endl;
+        std::cout << std::ctime(&now) << "[LOG]>> " << message << std::endl;
 }

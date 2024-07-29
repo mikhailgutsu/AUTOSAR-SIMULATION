@@ -11,7 +11,7 @@ private:
 public:
     F_Logger(const std::string& filename);
     ~F_Logger();
-    void log(const std::string& message);
+    void f_log(const std::string& message);
 };
 
 #endif // LOGGER_H

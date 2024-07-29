@@ -298,6 +298,8 @@ int main()
                     switch(buildGUI())
                     {
                         case 1:
+                            BuildChoise(0x01);
+                                break;
                         case 2:
                         case 3:
                         case 4:
