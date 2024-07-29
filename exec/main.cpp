@@ -1,7 +1,7 @@
 #include <iostream>
 #include <windows.h>
 
-#include "logger/incl/logger.h"
+#include "logger/incl/f_logger.h"
 #include "startMenu/src/menu.cpp"
 #include "startMenu/src/checker.cpp"
 #include "startMenu/src/terminal.cpp"
@@ -280,7 +280,7 @@ int main()
     //system(("mkdir -p " + directory).c_str());
 
     // Initialize logger
-    //Logger logger(logFilePath);
+    //F_Logger logger(logFilePath);
 
     // Log messages
     //logger.log("This is a log message.");
