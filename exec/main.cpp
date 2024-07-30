@@ -337,7 +337,7 @@ int main()
                             BuildChoise(0x0D);
                                 break;
                         case 14:
-                            return 0;
+                            BuildChoise(0x0E);
                             break;
                         case 15:
                         case 0:
