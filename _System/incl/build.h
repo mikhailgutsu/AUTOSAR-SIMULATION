@@ -1,9 +1,10 @@
 #ifndef BUILD_H
 #define BUILD_H
 
+char Init_Checker();
+
 class Build {
 private:
-    
 
 public:
     Build();
