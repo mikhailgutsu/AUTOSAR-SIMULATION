@@ -85,6 +85,13 @@ extern char BuildChoise(char tmp)
             b1.tresosCnf();
                 // To be continue..
             break;
+        case 0x0E:
+            std::cout << "0x0D" << std::endl;
+
+            b1.tresosCnf();
+                // To be continue..
+            break;
+            
         default:
             std::cout << "default" << std::endl;
     }
