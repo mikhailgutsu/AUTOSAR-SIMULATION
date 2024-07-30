@@ -301,17 +301,41 @@ int main()
                             BuildChoise(0x01);
                                 break;
                         case 2:
+                            BuildChoise(0x02);
+                                break;
                         case 3:
+                            BuildChoise(0x03);
+                                break;
                         case 4:
+                            BuildChoise(0x04);
+                                break;
                         case 5:
+                            BuildChoise(0x05);
+                                break;
                         case 6:
+                            BuildChoise(0x06);
+                                break;
                         case 7:
+                            BuildChoise(0x07);
+                                break;
                         case 8:
+                            BuildChoise(0x08);
+                                break;
                         case 9:
+                            BuildChoise(0x09);
+                                break;
                         case 10:
+                            BuildChoise(0x0A);
+                                break;
                         case 11:
+                            BuildChoise(0x0B);
+                                break;
                         case 12:
+                            BuildChoise(0x0C);
+                                break;
                         case 13:
+                            BuildChoise(0x0D);
+                                break;
                         case 14:
                             return 0;
                             break;
