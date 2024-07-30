@@ -9,7 +9,6 @@ extern char BuildChoise(char tmp)
     switch(tmp)
     {
         case 0x01:
-            std::cout << "0x01" << std::endl;
 
             b1.All();
                 // To be continue..
