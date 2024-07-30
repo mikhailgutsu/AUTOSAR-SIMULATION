@@ -9,7 +9,7 @@ char com_Init()
 {
     char retVal = E_NOT_OK;
 
-    //body
+    // Body
 
     retVal = E_OK;
         return retVal;
